@@ -1,0 +1,26 @@
+{
+  "name": "calendar",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors"
+  },
+  "author": "Sebastian Marullo",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "moment": "^2.18.1",
+    "react": "^15.5.4",
+    "react-datepicker": "^0.46.0",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0"
+  }
+}
