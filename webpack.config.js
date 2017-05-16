@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './main.js',
@@ -13,16 +14,7 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
-      }, 
-       {
-			test: /\.css$/,
-			loader: "style-loader!css-loader?module=true&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]",
-			exclude: /semantic/
-		}, 
-		{
-			test: /semantic.*\.css$/,
-			loader: "style-loader!css-loader?importLoaders=1"
-		}
+      }
     ]
-  },
+  }
 };

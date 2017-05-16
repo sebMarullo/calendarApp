@@ -1,18 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-import 'react-datepicker/dist/react-datepicker.css';
+var ReactDOM = require('react-dom');
 
+// CSS Modules, react-datepicker-cssmodules.css
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
-var state2, change2;
-
-class Example extends React.Component {
+class Calender extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       startDate: moment()
-    }; 
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -22,7 +21,6 @@ class Example extends React.Component {
     });
   }
 
-
   render() {
     return <DatePicker
         selected={this.state.startDate}
@@ -30,6 +28,8 @@ class Example extends React.Component {
     />;
   }
 }
-  
 
-ReactDOM.render(<DatePicker selected={this.state.startDate} onChange={this.handleChange}/>, document.getElementById('hello'));
+ReactDOM.render(
+  <Calender />,
+  document.getElementById('app')
+);
