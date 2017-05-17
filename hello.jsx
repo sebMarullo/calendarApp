@@ -3,8 +3,7 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 var ReactDOM = require('react-dom');
 
-// CSS Modules, react-datepicker-cssmodules.css
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import 'react-datepicker/dist/react-datepicker-cssmodules.css'; 
 
 class Calender extends React.Component {
   constructor (props) {

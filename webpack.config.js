@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './main.js',
-  output: { path: __dirname, filename: 'bundle.js' },
+  output: { path: __dirname, filename: './public/bundle.js' },
   module: {
     loaders: [
       {
@@ -14,7 +14,12 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      }, 
+      {
+      	test: /\.css$/,
+      	loader: "style-loader!css-loader"
       }
     ]
   }
 };
+
