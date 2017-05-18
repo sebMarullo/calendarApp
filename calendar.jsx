@@ -11,6 +11,13 @@ class Calender extends React.Component {
     this.state = {
       startDate: moment()
     };
+
+    //Onlye week days
+    this.isWeekday = (date) => {
+      const day = date.day()
+      return day !== 0 && day !== 6
+    }
+
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -20,15 +27,23 @@ class Calender extends React.Component {
     });
   }
 
+
+
   render() {
     return <DatePicker
+        className="myshop_datepicker_react"
+        dateFormat="DD/MM/YYYY"
         selected={this.state.startDate}
         onChange={this.handleChange}
+        placeholderText="Click to select a date"
+
+        //Only week days
+        filterDate={this.isWeekday}
     />;
   }
 }
 
 ReactDOM.render(
   <Calender />,
-  document.getElementById('app')
+  document.getElementById('myshop_datepicker_content')
 );
